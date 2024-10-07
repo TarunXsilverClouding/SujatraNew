@@ -1,75 +1,503 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_K7FQn8": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_gcQ9P4": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "image": "shopify:\/\/shop_images\/image_16_148f0a0f-2bb3-4534-a355-13a9a502c572.png",
+            "mobile_image": "shopify:\/\/shop_images\/hero.png",
+            "cat_title": "COLLECTION",
+            "heading": "DESIGNER TRADITIONAL WEARS",
+            "heading_size": "h1",
+            "subheading": "Best is class collection of Designer sarees, kurtis, dupattas, Dresses, top.",
+            "button_label": "SHOP NOW",
+            "link": "#",
+            "button_radius": "circular",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 60,
+            "color_scheme": "scheme-5",
+            "position_alignment_mobile": "bottom",
+            "text_alignment_mobile": "center"
           }
         },
-        "button": {
-          "type": "buttons",
+        "slide_Tf6e86": {
+          "type": "slide",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify:\/\/shop_images\/image_44_2_55e1504a-6cb1-46f7-b2c2-8eb03b27311b.png",
+            "mobile_image": "shopify:\/\/shop_images\/DSC_453_copy_1024x1024_1.png",
+            "cat_title": "COLLECTION",
+            "heading": "DESIGNER TRADITIONAL WEARS",
+            "heading_size": "h1",
+            "subheading": "Best is class collection of Designer sarees, kurtis, dupattas, Dresses, top.",
+            "button_label": "SHOP NOW",
+            "link": "#",
+            "button_radius": "Circular",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-7765c3a8-ee80-48a1-aaee-cee5b81e8a17",
+            "position_alignment_mobile": "bottom",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_gcQ9P4",
+        "slide_Tf6e86"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 3,
         "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "banner_strip_jwTjJC": {
+      "type": "banner-strip",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "heading": "about Sujatra",
+        "color_scheme": "scheme-7765c3a8-ee80-48a1-aaee-cee5b81e8a17",
+        "device": "both",
+        "polygon": "0",
+        "margin_top": 5,
+        "margin_bottom": 0
+      }
+    },
+    "slideshow_RWRUNX": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_xXr3rX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_5_2.png",
+            "mobile_image": "shopify:\/\/shop_images\/DSC02954_copy.png",
+            "cat_title": "COLLECTION",
+            "heading": "EXCLUSIVE SAREES",
+            "heading_size": "h1",
+            "subheading": "Check all designer collection like Madhubani, Kalamkari",
+            "button_label": "SHOP NOW",
+            "link": "#",
+            "button_radius": "Circular",
+            "button_style_secondary": false,
+            "box_align": "middle-right",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 70,
+            "color_scheme": "scheme-7765c3a8-ee80-48a1-aaee-cee5b81e8a17",
+            "position_alignment_mobile": "bottom",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_xXr3rX"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "image_with_text_iBppG9": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_bEWFNk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_GRGfH7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "caption_VPNwTg": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "text_bEWFNk",
+        "button_GRGfH7",
+        "caption_VPNwTg"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1H2A4377_1024x1024_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "banner_strip_GxTUjH": {
+      "type": "banner-strip",
+      "settings": {
+        "heading": "Featured Product",
+        "color_scheme": "scheme-7765c3a8-ee80-48a1-aaee-cee5b81e8a17",
+        "device": "both",
+        "polygon": "yes",
+        "margin_top": 10,
+        "margin_bottom": 0
+      }
+    },
+    "sujatra_custom_slider_H7yRmw": {
+      "type": "sujatra-custom-slider",
+      "blocks": {
+        "slider_tpgMiK": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC_453_copy_1024x1024_1_1_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_gAfqrD": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC02864copy_1024x1024_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_twKEG6": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC01735copy_1024x1024_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_HDxrNp": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copyof7.1SUJ19AUG000667copy_1024x1024_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_8Ax3Ke": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC_453_copy_1024x1024_1_1_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_tFyMXM": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SN23AUG-LR_2778of1_copy_1024x1024_1_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_fh4wrw": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC_453_copy_1024x1024_1_1_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_TK3zFV": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC02864copy_1024x1024_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_gYG9bK": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC01735copy_1024x1024_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        },
+        "slider_3Kj6ka": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copyof7.1SUJ19AUG000667copy_1024x1024_Custom.png",
+            "category": "",
+            "title": "TOP",
+            "cta_text": "SHOP NOW",
+            "cta_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "slider_tpgMiK",
+        "slider_gAfqrD",
+        "slider_twKEG6",
+        "slider_HDxrNp",
+        "slider_8Ax3Ke",
+        "slider_tFyMXM",
+        "slider_fh4wrw",
+        "slider_TK3zFV",
+        "slider_gYG9bK",
+        "slider_3Kj6ka"
+      ],
+      "settings": {
+        "button_background": "transparent",
+        "color_scheme": "scheme-465b878a-876b-40df-a394-33b8b7117c98",
+        "button_style_secondary": false,
+        "navigation_dot": "false",
+        "navigation_dot_device": "desktop",
+        "scroll_arrow": "true",
+        "arrow_device": "both",
+        "image_perview_desktop": 6,
+        "image_perview_mobile": 2,
+        "text_alignment": "middle",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "banner_strip_L8m8Q7": {
+      "type": "banner-strip",
+      "settings": {
+        "heading": "celebrity corner",
+        "color_scheme": "scheme-7765c3a8-ee80-48a1-aaee-cee5b81e8a17",
+        "device": "both",
+        "polygon": "yes",
+        "margin_top": 20,
+        "margin_bottom": 0
+      }
+    },
+    "sujatra_custom_slider_tB4rzr": {
+      "type": "sujatra-custom-slider",
+      "blocks": {
+        "slider_ehW7GB": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_Black_Minimalist_Fashion_Show_Magazine_3_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_M8Rd7X": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_Black_Minimalist_Fashion_Show_Magazine_2_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_dyg9Bd": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brown_Elegant_and_Simple_Fashion_Magazine_Cover_1_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_fhHprb": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_Black_Minimalist_Fashion_Show_Magazine_3_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_gBkywF": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_Black_Minimalist_Fashion_Show_Magazine_2_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_3jjdmb": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brown_Elegant_and_Simple_Fashion_Magazine_Cover_1_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_Gi47FY": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_Black_Minimalist_Fashion_Show_Magazine_3_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_erfctj": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_Black_Minimalist_Fashion_Show_Magazine_2_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_3eWLjN": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brown_Elegant_and_Simple_Fashion_Magazine_Cover_1_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_kagDzH": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_Black_Minimalist_Fashion_Show_Magazine_3_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "slider_FByNMM": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brown_Elegant_and_Simple_Fashion_Magazine_Cover_1_Custom.png",
+            "category": "",
+            "title": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_ehW7GB",
+        "slider_M8Rd7X",
+        "slider_dyg9Bd",
+        "slider_fhHprb",
+        "slider_gBkywF",
+        "slider_3jjdmb",
+        "slider_Gi47FY",
+        "slider_erfctj",
+        "slider_3eWLjN",
+        "slider_kagDzH",
+        "slider_FByNMM"
+      ],
+      "settings": {
+        "button_background": "transparent",
+        "color_scheme": "scheme-1",
+        "button_style_secondary": false,
+        "navigation_dot": "false",
+        "navigation_dot_device": "desktop",
+        "scroll_arrow": "true",
+        "arrow_device": "both",
+        "image_perview_desktop": 6,
+        "image_perview_mobile": 2,
+        "text_alignment": "middle",
+        "desktop_padding_top": 0,
+        "desktop_padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "banner_strip_azddXY": {
+      "type": "banner-strip",
+      "settings": {
+        "heading": "in the news",
+        "color_scheme": "scheme-7765c3a8-ee80-48a1-aaee-cee5b81e8a17",
+        "device": "both",
+        "polygon": "No",
+        "margin_top": 10,
+        "margin_bottom": 6
+      }
+    },
+    "news_section_Ew4Lpz": {
+      "type": "news-section",
+      "settings": {
+        "first_image": "shopify:\/\/shop_images\/Feature_32_1.jpg",
+        "first_image_url": "#",
+        "second_image": "shopify:\/\/shop_images\/ScreenShot_20240909215734_1.jpg",
+        "second_image_url": "#",
+        "third_image": "shopify:\/\/shop_images\/ScreenShot_20240909215611_1.jpg",
+        "third_image_url": "#",
+        "fourth_image": "shopify:\/\/shop_images\/ScreenShot_20240909214727_copy_1.jpg",
+        "fourth_image_url": "#",
+        "fifth_image": "shopify:\/\/shop_images\/ScreenShot_20240909214929.jpg",
+        "fifth_image_url": "#"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "slideshow_K7FQn8",
+    "banner_strip_jwTjJC",
+    "slideshow_RWRUNX",
+    "image_with_text_iBppG9",
+    "banner_strip_GxTUjH",
+    "sujatra_custom_slider_H7yRmw",
+    "banner_strip_L8m8Q7",
+    "sujatra_custom_slider_tB4rzr",
+    "banner_strip_azddXY",
+    "news_section_Ew4Lpz"
   ]
 }

@@ -5,19 +5,20 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
+        "announcement_dcpywG": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "New Kurta Launch",
+            "secondary_text": "Shop",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement_dcpywG"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-7765c3a8-ee80-48a1-aaee-cee5b81e8a17",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
@@ -31,18 +32,18 @@
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "enable_customer_avatar": true,
-        "mobile_logo_position": "center",
+        "mobile_logo_position": "left",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     }
   },

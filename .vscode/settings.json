@@ -1,0 +1,12 @@
+{
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "block-outline",
+  "editor.cursorSurroundingLines": 0,
+  "editor.cursorWidth": 0,
+  "editor.fontFamily": "FiraCode ",
+  "editor.fontSize": 18,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.showSlider": "mouseover"
+}
