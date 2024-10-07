@@ -40,8 +40,14 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
-          <p class="announcement-bar__message h5">
+          <p class="announcement-bar__message top-header">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
+            {% if section.blocks.first.settings.secondary_text != blank %}
+              <span class="">-</span>
+              <span class="announcement-bar__message-secondary secondary-text">
+                {{ section.blocks.first.settings.secondary_text | escape }}
+              </span>
+            {% endif %}
             {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
@@ -101,8 +107,13 @@
                         class="announcement-bar__link link link--text focus-inset animate-arrow"
                       >
                     {%- endif -%}
-                    <p class="announcement-bar__message h5">
+                    <p class="announcement-bar__message top-header">
                       <span>{{ block.settings.text | escape }}</span>
+                      {% if block.settings.secondary_text != blank %}
+                        <span class="announcement-bar__message-secondary secondary-text">
+                          {{ block.settings.secondary_text | escape }}
+                        </span>
+                      {% endif %}
                       {%- if block.settings.link != blank -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       {%- endif -%}
@@ -249,6 +260,11 @@
           "id": "text",
           "default": "t:sections.announcement-bar.blocks.announcement.settings.text.default",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "secondary_text",
+          "label": "Secondary Text"
         },
         {
           "type": "url",
