@@ -1,0 +1,231 @@
+{% comment %}
+  <div class="main-parent-section">
+    {% if section.settings.first_image != blank %}
+      {%- liquid
+        assign height = section.settings.first_image.width | divided_by: section.settings.first_image.aspect_ratio | round
+
+        assign sizes = '100vw'
+        assign widths = '150, 300, 450, 660, 900, 1320, 1800, 2136, 2400'
+
+        assign fetch_priority = 'high'
+      -%}
+      <div class="image-container">
+        <a href="{{ section.settings.first_image_url }}">
+          {{
+            section.settings.first_image
+            | image_url: width: 2400
+            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </a>
+      </div>
+    {% endif %}
+    <div class="child-section">
+      {% if section.settings.second_image != blank %}
+        {%- liquid
+          assign height = section.settings.second_image.width | divided_by: section.settings.second_image.aspect_ratio | round
+
+          assign sizes = '100vw'
+          assign widths = '150, 300, 450, 660, 900, 1320, 1800, 2136, 2400'
+
+          assign fetch_priority = 'high'
+        -%}
+        <div class="image-container">
+          <a href="{{ section.settings.second_image_url }}">
+            {{
+              section.settings.second_image
+              | image_url: width: 2400
+              | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+            }}
+          </a>
+        </div>
+      {% endif %}
+      {% if section.settings.third_image != blank %}
+        {%- liquid
+          assign height = section.settings.third_image.width | divided_by: section.settings.third_image.aspect_ratio | round
+
+          assign sizes = '100vw'
+          assign widths = '150, 300, 450, 660, 900, 1320, 1800, 2136, 2400'
+
+          assign fetch_priority = 'high'
+        -%}
+        <div class="image-container">
+          <a href="{{ section.settings.third_image_url }}">
+            {{
+              section.settings.third_image
+              | image_url: width: 2400
+              | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+            }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="bottom-section">
+    {% if section.settings.fourth_image != blank %}
+      {%- liquid
+        assign height = section.settings.fourth_image.width | divided_by: section.settings.fourth_image.aspect_ratio | round
+
+        assign sizes = '100vw'
+        assign widths = '150, 300, 450, 660, 900, 1320, 1800, 2136, 2400'
+
+        assign fetch_priority = 'high'
+      -%}
+      <div class="image-container">
+        <a href="{{ section.settings.fourth_image_url }}">
+          {{
+            section.settings.fourth_image
+            | image_url: width: 2400
+            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </a>
+      </div>
+    {% endif %}
+    {% if section.settings.fifth_image != blank %}
+      {%- liquid
+        assign height = section.settings.fifth_image.width | divided_by: section.settings.fifth_image.aspect_ratio | round
+
+        assign sizes = '100vw'
+        assign widths = '150, 300, 450, 660, 900, 1320, 1800, 2136, 2400'
+
+        assign fetch_priority = 'high'
+      -%}
+      <div class="image-container">
+        <a href="{{ section.settings.fifth_image_url }}">
+          {{
+            section.settings.fifth_image
+            | image_url: width: 2400
+            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+{% endcomment %}
+
+<div class="main-parent-section">
+  {% if section.settings.first_image != blank %}
+    <div class="image-container first-image">
+      <a href="{{ section.settings.first_image_url }}">
+        {{
+          section.settings.first_image
+          | image_url: width: 2400
+          | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+        }}
+      </a>
+    </div>
+  {% endif %}
+  <div class="right-images">
+    {% if section.settings.second_image != blank %}
+      <div class="image-container second-image">
+        <a href="{{ section.settings.second_image_url }}">
+          {{
+            section.settings.second_image
+            | image_url: width: 2400
+            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </a>
+      </div>
+    {% endif %}
+    {% if section.settings.third_image != blank %}
+      <div class="image-container third-image">
+        <a href="{{ section.settings.third_image_url }}">
+          {{
+            section.settings.third_image
+            | image_url: width: 2400
+            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="bottom-section">
+    {% if section.settings.fourth_image != blank %}
+      <div class="image-container fourth-image">
+        <a href="{{ section.settings.fourth_image_url }}">
+          {{
+            section.settings.fourth_image
+            | image_url: width: 2400
+            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </a>
+      </div>
+    {% endif %}
+    {% if section.settings.fifth_image != blank %}
+      <div class="image-container fifth-image">
+        <a href="{{ section.settings.fifth_image_url }}">
+          {{
+            section.settings.fifth_image
+            | image_url: width: 2400
+            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "New Section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "First Image",
+      "id": "first_image"
+    },
+    {
+      "type": "url",
+      "label": "First Image Url",
+      "id": "first_image_url"
+    },
+    {
+      "type": "image_picker",
+      "label": "Second Image",
+      "id": "second_image"
+    },
+    {
+      "type": "url",
+      "label": "Second Image Url",
+      "id": "second_image_url"
+    },
+    {
+      "type": "image_picker",
+      "label": "Third Image",
+      "id": "third_image"
+    },
+    {
+      "type": "url",
+      "label": "Third Image Url",
+      "id": "third_image_url"
+    },
+    {
+      "type": "image_picker",
+      "label": "Fourth Image",
+      "id": "fourth_image"
+    },
+    {
+      "type": "url",
+      "label": "Fourth Image Url",
+      "id": "fourth_image_url"
+    },
+    {
+      "type": "image_picker",
+      "label": "Fifth Image",
+      "id": "fifth_image"
+    },
+    {
+      "type": "url",
+      "label": "Fifth Image Url",
+      "id": "fifth_image_url"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "News Section"
+    }
+  ]
+}
+{% endschema %}

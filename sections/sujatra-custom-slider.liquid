@@ -1,0 +1,318 @@
+<style>
+  #shopify-section-{{ section.id }}{
+  padding-Top: {{ section.settings.mobile_padding_top }}px;
+  padding-bottom: {{ section.settings.mobile_padding_bottom}}px;
+  }
+
+  @media (min-width:750px){
+    #shopify-section-{{ section.id }}{
+      padding-Top: {{ section.settings.desktop_padding_top }}px;
+      padding-bottom: {{ section.settings.desktop_padding_bottom }}px;
+      }
+  }
+</style>
+
+<div class="custom-slider custom-slider--{{ section.id }}  swiper-container {% if section.settings.navigation_dot == 'true'  %} navigation-dot-parent {% endif %} ">
+  <div class="custom-slider__wrapper swiper-wrapper color-{{ section.settings.color_scheme }} gradient">
+    {% for block in section.blocks %}
+      <div class="custom-slider__slide swiper-slide">
+        <div class="custom-slider__image">
+          {% comment %} <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.title }}"> {% endcomment %}
+          {% if block.settings.image != blank %}
+            {%- liquid
+              assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+
+              assign sizes = '100vw'
+              assign widths = '150, 300, 450, 660, 900, 1320, 1800, 2136, 2400'
+
+              assign fetch_priority = 'high'
+            -%}
+            <div class="custom-slider__image-container">
+              {% comment %} <img src="{{ block.settings.image | img_url: 'medium' }}" alt="Support Image"> {% endcomment %}
+              {{
+                block.settings.image
+                | image_url: width: 2400
+                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+              }}
+            </div>
+          {% endif %}
+          <div class="custom-slider__content ">
+            <div class="custom-slider__content-container custom-slider__content--{{ section.settings.text_alignment }}">
+              <div class="custom-slider__text">
+                <span class="custom-slider__category">{{ block.settings.category }}</span>
+                <p class="custom-slider__title">{{ block.settings.title }}</p>
+              </div>
+              {% if block.settings.cta_text and block.settings.cta_url %}
+                <button
+                  href="{{ block.settings.cta_url }}"
+                  class="custom-slider__button button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+                >
+                  {{ block.settings.cta_text }}
+                </button>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if section.settings.scroll_arrow == 'true' %}
+    <div class="custom-slider__navigation {% if section.settings.arrow_device == 'desktop' %}small-hide{% endif %} {% if section.settings.arrow_device == 'mobile' %}medium-hide large-up-hide{% endif %}">
+      <div class="custom-slider__arrow prev--{{section.id}} custom-slider__arrow--prev">
+        {{- 'sujatra-left-arrow.svg' | inline_asset_content -}}
+      </div>
+      <div class="custom-slider__arrow next--{{section.id}} custom-slider__arrow--next">
+        {{- 'sujatra-right-arrow.svg' | inline_asset_content -}}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if section.settings.navigation_dot == 'true' %}
+    <div
+      class="swiper-pagination swiper-pagination--{{ section.id }}  {% if section.settings.navigation_dot_device == 'desktop' %}small-hide{% endif %} {% if section.settings.navigation_dot_device == 'mobile' %}medium-hide large-up-hide{% endif %}"
+    ></div>
+  {% endif %}
+</div>
+
+<script>
+  const swiper_{{ section.id | remove:'-'  }} = new Swiper('.custom-slider--{{ section.id }}', {
+    slidesPerView: {{ section.settings.image_perview_mobile }},
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.next--{{section.id}}',
+      prevEl: '.prev--{{section.id}}',
+    },
+    pagination: {
+      el: ".swiper-pagination--{{ section.id }}",
+      clickable: true,
+    },
+    breakpoints: {
+      750: {
+        slidesPerView: {{ section.settings.image_perview_mobile }}+2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: {{ section.settings.image_perview_desktop }},
+      }
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "label": "Button Background",
+      "id": "button_background",
+      "options": [
+        {
+          "label": "Transparent",
+          "value": "transparent"
+        },
+        {
+          "label": "Color",
+          "value": "#D13F61"
+        }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+
+      "label": "Color Scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "label": "Use outline button style",
+      "default": false
+    },
+    {
+      "type": "select",
+      "label": "Navigation Dot",
+      "id": "navigation_dot",
+      "default": "false",
+      "info": "Naviagtion dot device will only work if this is enabled",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Navigation Dot Devices",
+      "id": "navigation_dot_device",
+      "default": "desktop",
+
+      "options": [
+        {
+          "label": "both",
+          "value": "both"
+        },
+        {
+          "label": "mobile",
+          "value": "mobile"
+        },
+        {
+          "label": "desktop",
+          "value": "desktop"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Scroll Arrow",
+      "id": "scroll_arrow",
+      "default": "false",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Arrow Devices",
+      "id": "arrow_device",
+      "default": "mobile",
+
+      "options": [
+        {
+          "label": "both",
+          "value": "both"
+        },
+        {
+          "label": "mobile",
+          "value": "mobile"
+        },
+        {
+          "label": "desktop",
+          "value": "desktop"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "label": "Image perview Desktop",
+      "id": "image_perview_desktop",
+      "default": 3,
+      "min": 1,
+      "max": 10,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "label": "image Perview Mobile",
+      "id": "image_perview_mobile",
+      "default": 2,
+      "min": 1,
+      "max": 4,
+      "step": 1
+    },
+    {
+      "type": "select",
+      "label": "Text Alignment",
+      "id": "text_alignment",
+      "options": [
+        {
+          "label": "Middle",
+          "value": "middle"
+        },
+        {
+          "label": "End",
+          "value": "end"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "label": "Desktop Padding Top",
+      "id": "desktop_padding_top",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "label": "Desktop Padding Bottom",
+      "id": "desktop_padding_bottom",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "label": "Mobile Padding Top",
+      "id": "mobile_padding_top",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "label": "Mobile Padding Bottom",
+      "id": "mobile_padding_bottom",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slider",
+      "name": "slider",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "label": "Category",
+          "id": "category"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "text",
+          "label": "CTA TEXT",
+          "id": "cta_text"
+        },
+        {
+          "type": "url",
+          "label": "CTA URL",
+          "id": "cta_url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sujatra Custom Slider"
+    }
+  ]
+}
+{% endschema %}
